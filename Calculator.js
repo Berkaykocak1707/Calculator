@@ -41,6 +41,12 @@ keys.addEventListener("click", function (e) {
 
 function operatorHandle(NewOperator){
     const value = parseFloat(displayValue);
+
+    if (operator && waitForNumber2) {
+        operator = NewOperator;
+        return;
+    }
+
     if (number1 === null)
     {
         number1 = value;
